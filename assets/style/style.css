@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Montserrat", sans-serif;
+}
+.hero{
+    position: relative;
+    background: url(../img/back-3.jpg) no-repeat ;
+    width: 100%;
+    height: 100vh;
+}
+/* nav style */
+.hero .menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #000;
+    height: 60px;
+    /* position: absolute; */
+
+}
+.menu ul li{
+    display: inline-block;
+    list-style-type: none;
+    height: 100%;
+    
+}
+.menu ul li a{
+    position: relative;
+}
+.item{
+    display: inline-block;
+    padding: 20px ;
+    margin: 20px 100px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a::after{
+    content: "";
+    position: absolute;
+    background-color: #ffc732;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 7px;
+    transition: 0.3s;
+    
+}
+a:hover::after{
+    width: 100%;
+}
+a::before{
+    content: "";
+    position: absolute;
+    background-color: #ffc732;
+    height: 3px;
+    width: 0;
+    left: 0;
+    top: 7px;
+    transition: 0.3s;
+    
+}
+a:hover::before{
+    width: 100%;
+}
+/* end nav style */
+.title {
+    color: #fff;
+    display: flex;
+    justify-content: center   ;
+    align-items: center;
+    flex-direction: column;
+    padding: 200px; 
+}
+.title h1{
+    FONT-WEIGHT: 400;
+    font-size: 100px;
+}
+
+.p-text{
+    background: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    
+}
+.street{
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    color: #fff;
+}
+
+.container{
+    margin: 0 400px;
+    text-align: center;
+}
+.about-title{
+    background: #000;
+    color: #fff;
+    display: inline-block;
+    margin: 70px ;
+    padding: 5px 10px;
+    text-align: center;
+}
+.about-title h2{
+    font-weight: 300;
+    font-size: 20px;
+    
+}
+.p-about p {
+    margin-top:20px ;
+    text-align: left;
+}
+.use{
+    background-color: #ffc732;
+    margin: 20px 0;
+    width: 100%;
+}
+.use p {
+    text-align: left;
+    padding: 20px ;
+    border-left:5px solid rgb(69, 85, 61) ;
+}
+.img-1 img{
+    width: 100%;
+} 
+.info p{
+    text-align: left;
+    margin: 20px 0;
+
+}
+.info p span{
+    font-weight: bold;
+}
+.box{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.head{
+    width: 100%;
+    height: 40px;
+    border: 1px solid gainsboro;
+    text-align: center;
+    box-shadow: 0 0 10px gainsboro;
+    
+}   
+.head button{
+    width: max-content;
+    display: inline-block;
+    padding: 5px 100px;
+    margin: 5px;
+    background-color: #fff;
+    color: #000;
+}
+.head .active{
+    background-color: #ffc732;
+}
+button:hover{
+    background-color: #ffc732;
+    box-shadow: 0 0 10px gainsboro;
+}
+
+.list{
+    padding: 30px 0;
+    border: 1px solid gainsboro;
+    box-shadow: 0 0 10px gainsboro;
+}
+.list p{
+    padding: 15px;
+}
+.list .subtitle{
+    color: gray;
+}
+.where-text{
+    text-align: left;
+    margin: 20px 0;
+}
+.where-text p{
+    padding: 5px 0;
+}
+.where-text span{
+    padding: 5px;
+    background: #000;
+    color: #fff;
+}
+form{
+    text-align: left;
+    padding: 20px 0 ;
+}
+.input input{
+    width: 100%;
+    padding: 20px 10px;
+    margin: 10px 0;
+    
+}
+input:hover{
+    border: 2px solid #ffc732;
+}
+button{
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    
+}
+footer{
+    padding: 40px;
+    width: 100%;
+    height: 100px;
+    background: #ffc732;
+    margin-top: 20px;
+    text-align: center;
+}
+footer p a{
+    color: #000;
+}

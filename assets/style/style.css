@@ -3,102 +3,104 @@
     padding: 0;
     box-sizing: border-box;
     font-family:"Montserrat", sans-serif;
-}
-.hero{
-    position: relative;
-    background: url(../img/back-3.jpg) no-repeat ;
-    width: 100%;
-    height: 100vh;
+    scroll-behavior: smooth;
 }
 /* nav style */
-.hero .menu{
+.navbar{
+    position: fixed;
+    z-index: 1;
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     background-color: #000;
     height: 60px;
-    /* position: absolute; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar .nav-item
+{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+.navbar .nav-item .nav-link
+{
+    font-size: 20px;
+    position: relative;
 
 }
-.menu ul li{
-    display: inline-block;
-    list-style-type: none;
-    height: 100%;
-    
-}
-.menu ul li a{
-    position: relative;
-}
 .item{
-    display: inline-block;
-    padding: 20px ;
-    margin: 20px 100px;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
 }
-a::after{
+.nav-link::after{
     content: "";
     position: absolute;
     background-color: #ffc732;
-    height: 3px;
+    height: 2px;
     width: 0;
     left: 0;
-    bottom: 7px;
-    transition: 0.3s;
-    
+    bottom: -10px;
+    transition: 0.3s; 
 }
-a:hover::after{
+.nav-link:hover::after{
     width: 100%;
 }
-a::before{
+.nav-link::before{
     content: "";
     position: absolute;
     background-color: #ffc732;
     height: 3px;
     width: 0;
     left: 0;
-    top: 7px;
+    top: -10px;
     transition: 0.3s;
-    
 }
-a:hover::before{
+.nav-link:hover::before{
     width: 100%;
 }
 /* end nav style */
+/* hero style  */
+.hero{
+    position: relative;
+    background: url(../img/back-3.jpg) no-repeat ;
+    background-position: left;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 .title {
     color: #fff;
-    display: flex;
-    justify-content: center   ;
-    align-items: center;
-    flex-direction: column;
-    padding: 200px; 
-}
-.title h1{
     FONT-WEIGHT: 400;
     font-size: 100px;
+    width: 250px;
 }
-
 .p-text{
     background: #000;
-    color: #fff;
-    display: inline-block;
     padding: 5px 10px;
-    position: absolute;
-    left: 30px;
-    bottom: 20px;
-    
+    margin: 0 50px;
 }
-.street{
+.street
+{
+    margin: 0 50px;
+}
+.info-hero
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     position: absolute;
-    right: 30px;
     bottom: 20px;
+    width: 100%;
     color: #fff;
 }
-
+/* end hero */
 .container{
-    margin: 0 400px;
+    padding: 0 300px;
     text-align: center;
 }
 .about-title{
@@ -108,13 +110,10 @@ a:hover::before{
     margin: 70px ;
     padding: 5px 10px;
     text-align: center;
-}
-.about-title h2{
     font-weight: 300;
     font-size: 20px;
-    
 }
-.p-about p {
+.p-about {
     margin-top:20px ;
     text-align: left;
 }
@@ -128,56 +127,67 @@ a:hover::before{
     padding: 20px ;
     border-left:5px solid rgb(69, 85, 61) ;
 }
-.img-1 img{
+.img-1 {
     width: 100%;
+    overflow: hidden;
 } 
-.info p{
+.img-1 img 
+{
+    width: 100%;
+}
+.info {
     text-align: left;
     margin: 20px 0;
 
 }
-.info p span{
+.info  span{
     font-weight: bold;
 }
 .box{
     width: 100%;
     text-align: left;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 .head{
     width: 100%;
-    height: 40px;
     border: 1px solid gainsboro;
     text-align: center;
     box-shadow: 0 0 10px gainsboro;
-    
+    display: flex;
+    align-items: center;
 }   
 .head button{
-    width: max-content;
-    display: inline-block;
-    padding: 5px 100px;
-    margin: 5px;
+    width: 50%;
+    padding: 5px;
+    margin:  5px;
     background-color: #fff;
     color: #000;
 }
-.head .active{
+.head .active:focus{
     background-color: #ffc732;
 }
 button:hover{
     background-color: #ffc732;
     box-shadow: 0 0 10px gainsboro;
 }
-
 .list{
-    padding: 30px 0;
+    padding: 10px 0;
     border: 1px solid gainsboro;
     box-shadow: 0 0 10px gainsboro;
+    height: max-content;
 }
 .list p{
     padding: 15px;
 }
 .list .subtitle{
     color: gray;
+}
+.list1
+{
+    display: none;
+    background-color: #000;
+    color: #fff;
 }
 .where-text{
     text-align: left;
@@ -214,13 +224,88 @@ button{
     
 }
 footer{
-    padding: 40px;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100px;
     background: #ffc732;
-    margin-top: 20px;
     text-align: center;
 }
 footer p a{
     color: #000;
+}
+/* media */
+@media (min-width:992px) and (max-width:1200px)
+{
+    .container{
+        padding: 0 200px;
+        text-align: center;
+    }
+}
+@media (min-width:768px) and (max-width:992px)
+{
+    .container{
+        padding: 0 120px;
+        text-align: center;
+    }
+    .about-title {
+        margin: 50px;
+    }
+}
+@media (min-width:576px) and (max-width:768px)
+{
+    .container{
+        padding: 0 60px;
+        text-align: center;
+    }
+    .about-title {
+        margin: 50px;
+    }
+}
+@media (min-width:300px) and (max-width:576px)
+{
+    p
+    {
+        font-size: small;
+    }
+    .navbar .nav-item .nav-link {
+        font-size: small;
+        position: relative;
+    }
+    .p-text {
+        background: #000;
+        padding: 5px 10px;
+        margin: 0 30px;
+    }
+    .about-title {
+        margin: 30px;
+        font-size: medium;
+        padding: 5px;
+    }
+    .sm-p
+    {
+        display: none;
+    }
+    .use p {
+        text-align: left;
+        padding: 8px;
+        border-left: 5px solid rgb(69, 85, 61);
+    }
+    .title {
+        color: #fff;
+        FONT-WEIGHT: 400;
+        font-size: 60px;
+        width: 250px;
+    }
+    .container{
+        padding: 0 30px;
+        text-align: center;
+    }
+    footer
+    {
+        height: 70px;
+    }
+    .list p {
+        padding: 7px;
+    }
 }

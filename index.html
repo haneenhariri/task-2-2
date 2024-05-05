@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> flowers online store </title>
+    <!-- icon link -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
     <!-- css file -->
     <link rel="stylesheet" href="./assets/style/style.css">
     <!-- font  -->
@@ -15,44 +19,34 @@
 <body>
     <!-- start -->
     <header>
-        <div class="hero">
-            <!-- nav bar start  -->
-            <nav class="menu">
-                <ul>
-                    <li><a class="item"  href="#Home">home</a></li>
-                    <li><a class="item"  href="#about">about</a></li>
-                    <li><a class="item"  href="#order">order</a></li>
-                    <li><a class="item"  href="#where">where</a></li>
-                </ul>
-            </nav>
-            <!-- nav bar end -->
-            <div class="title" id="Home">
-                <h1>the</h1>
-                <h1>store</h1> 
-            </div>
-            <div class="p-text">
-                <p>open from 6am to 5pm </p>
-            </div>
-            <div class="street">
-                <p> 15 Adr street , 5015</p>
+        <!-- nav bar start  -->
+        <nav class="navbar">
+            <ul class="nav-item">
+                <li class="nav-link"><a class="item"  href="#Home">home</a></li>
+                <li class="nav-link"><a class="item"  href="#about">about</a></li>
+                <li class="nav-link"><a class="item"  href="#order">order</a></li>
+                <li class="nav-link"><a class="item"  href="#where">where</a></li>
+            </ul>
+        </nav>
+        <!-- nav bar end -->
+        <div class="hero" id="Home">
+            <h1 class="title">the store</h1> 
+            <div class="info-hero">
+                <p class="p-text" >open from 6am to 5pm </p>
+                <p class="street"> 15 Adr street , 5015</p>
             </div>
         </div>
     </header>
     <!-- start main section -->
-    <main>
-        <div class="container">
+    <main class="container">
             <section id="about">
-                <div class="about-title">
-                    <h2>ABOUT THE STORE</h2>
-                </div>
-                <div class="p-about">
-                    <p>
+                <h2 class="about-title">ABOUT THE STORE</h2>
+                    <p class="p-about">
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur tenetur maxime quam est eos saepe excepturi sunt nihil doloremque exercitationem, maiores aut reprehenderit facere non aliquam, quod deleniti esse a obcaecati! Debitis nostrum minus id officia odio. Totam, vitae quia.
                     </p>
-                    <p>
+                    <p class="p-about sm-p">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem similique est animi pariatur reprehenderit aut nulla repudiandae culpa hic, architecto impedit fugit consectetur. Id minima minus nam dolor facilis neque!
                     </p>
-                </div>
                 <div class="use">
                     <p>
                         "Use nature flowers for what worth but never too early nor too late" .
@@ -61,30 +55,24 @@
                         store , storeeist and owner : ahmad noor.
                     </p>
                 </div>
-                <div class="img-1">
-                    <img src="./assets/img/store.jpg" alt="store">
-                </div>
-                <div class="info">
-                    <p>
-                        <span>Opening hours :</span>
-                         every day from 6am to 5pm 
-                    </p>
-                    <p>
-                        <span> Address :</span>
-                         15 Adr street, 5015 , NY
-                    </p>
-                </div>
+                <img class="img-1" src="./assets/img/store.jpg" alt="store">
+                <p class="info">
+                    <span>Opening hours :</span>
+                    every day from 6am to 5pm 
+                </p>
+                <p class="info">
+                    <span> Address :</span>
+                     15 Adr street, 5015 , NY
+                </p>
             </section>
             <section id="order">
-                <div class="about-title">
-                    <h2>THE ORDER</h2>
-                </div>
+                <h2 class="about-title">THE ORDER</h2>
                 <div class="box">
                     <div class="head">
-                        <button class="active">Gifts</button>
-                        <button>Bouqyet</button>
+                        <button class="active" onclick="change2()">Gifts</button>
+                        <button class="change" onclick="change()">Bouqyet</button>
                     </div>
-                    <div class="list">
+                    <div class="list" id="listChange">
                         <p class="master-title">Flower Basket</p>
                         <p class="subtitle">Natural sunflower basket with yellow tulips</p>
                         <p class="master-title">Lorem, ipsum.</p>
@@ -96,21 +84,28 @@
                         <p class="master-title">Lorem, ipsum.</p>
                         <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                     </div>
+                    <div class="list list1" id="listChange1">
+                        <p class="master-title">Lorem, ipsum.</p>
+                        <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <p class="subtitle">Lorem ipsum dolor sit amet.</p>
+                        <p class="master-title">Lorem, ipsum.</p>
+                        <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <p class="master-title">Lorem, ipsum.</p>
+                        <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <p class="master-title">Lorem, ipsum.</p>
+                    </div>
                 </div>
                 <div class="img-1">
                     <img src="./assets/img/peakpx.jpg" alt="flowers">
                 </div>
             </section>
             <section id="where">
-                <div class="about-title">
-                    <h2>WHERE TO FIND US</h2>
-                </div>
-                <div class="info">
-                    <p>
-                        Find us at some place.
-                    </p>
-                </div>
-                
+                <h2 class="about-title">WHERE TO FIND</h2>
+                <p class="info">
+                    Find us at some place.
+                </p>
                 <div class="img-1">
                     <img src="./assets/img/location.jpg" alt="location">
                 </div>
@@ -147,5 +142,6 @@
     </footer>
     <!-- end footer -->
     <!-- end  -->
+    <script src="script.js"></script>
 </body>
 </html>
